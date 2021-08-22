@@ -1,4 +1,5 @@
 <?php
+// start session
     session_start();
 /**
  * Connect to database
@@ -36,15 +37,10 @@ function sortBy($word){
 }
 
 function uploadImage($file) {
-    //print_r($_FILES['image_url']);
     $imageName = $_FILES['image']['name'];
     $imagTmp = $_FILES['image']['tmp_name'];
     $imageSize = $_FILES['image']['size'];
     $error = $_FILES['image']['error'];
-    // if($imageSize > 525000) {
-    //         header('location: ../index.php?page=home');
-    //         $_SESSION['message'] = "Big size";
-    // } else {
             $extension = pathinfo($imageName, PATHINFO_EXTENSION);
             $extensionLocal = strtolower($extension);
             $allowExtension = array('jpg', 'jpeg', 'png');
@@ -52,13 +48,11 @@ function uploadImage($file) {
                 $newImageName = uniqid('post-', true) . '.' . $extensionLocal;
                 $folderImage = '../uploads/'. $newImageName;
                 move_uploaded_file($imagTmp, $folderImage);
-                // echo dirname(getcwd());
                 return $newImageName;
             }
             else{
                 return "error";
             }
-    // }
    
    
 }
@@ -148,13 +142,14 @@ function login($value) {
 function logout() {
     session_start();
     session_destroy();
-   
     header("Location: http://localhost/PHP-PROJECT-SREYAEM/?page=login_html");
 }
 
 function register($value) {
   $username = trim($value['username']);
   $password = password_hash(trim($value['password']), PASSWORD_DEFAULT);
+  $email = trim($value['email']);
+  $address = trim($value['address']);
   $role = $value['role'];
-  return db()->query("INSERT INTO users(username, password, role) VALUES('$username', '$password', '$role')");   
+  return db()->query("INSERT INTO users(username, password, role, email, address) VALUES('$username', '$password', '$role', '$email', '$address')");   
 }
