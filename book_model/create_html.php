@@ -1,8 +1,11 @@
 <?php require_once('../partial/header.php'); ?>
     <div class="container p-4">
-        <form action="create_model.php" method="post">
+        <form action="create_model.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Title" name="title">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Category" name="category">
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Price" name="price">
@@ -18,11 +21,10 @@
                 <input type="text" class="form-control" placeholder="Author Name" name="author">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Image URL" name="image_url">
+                <input type="file" class="form-control" placeholder="Image URL" name="image" id="image">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Description" name="description">
-                <!-- <textarea name="description" id="" cols="70" rows="10" placeholder="Description.."></textarea> -->
+                <textarea name="description" id="" cols="70" rows="10" placeholder="Description.."></textarea>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">Create</button>

@@ -1,4 +1,4 @@
 <?php
-    require_once('../database/database.php');
+    require_once('../database.php');
     $id = $_GET['id'];
     deleteBook($id);
