@@ -33,11 +33,12 @@
                         <p class="mt-3" style="width:100vh"><?= $description ?>... <a href="?page=detail&id=<?= $book['book_id'] ?>" class="text-primary">Readmore</a></p>
                     </div>
                </div>
-
+               <?php if(isset($_SESSION['role']) and $_SESSION['role'] == 'admin'): ?>
                 <div class="action d-flex justify-content-end">
                     <a href="book_model/update_html.php?id=<?= $book['book_id'] ?>" class="btn btn-primary btn-sm mr-2"><i class="fa fa-pencil"></i></a>
                     <a href="book_model/delete_model.php?id=<?= $book['book_id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                 </div>
+                <?php endif; ?>
             </div> 
         </div>
         <?php endforeach; ?>
