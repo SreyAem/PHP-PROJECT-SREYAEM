@@ -1,6 +1,11 @@
 <?php
 // start session
-    session_start();
+    // session_start();
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
+    
 /**
  * Connect to database
  */
@@ -153,3 +158,4 @@ function register($value) {
   $role = $value['role'];
   return db()->query("INSERT INTO users(username, password, role, email, address) VALUES('$username', '$password', '$role', '$email', '$address')");   
 }
+?>
