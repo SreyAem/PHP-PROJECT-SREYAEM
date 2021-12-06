@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2021 at 04:00 PM
+-- Generation Time: Dec 06, 2021 at 02:33 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -97,11 +97,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `email`, `address`) VALUES
-(8, 'amy', '$2y$10$jguqkPB8G7oj1S3xMLoHZ.WFVWQBynVm5z9ZKWalcOr312bBBdG2u', 'admin', 'amy@gmail.com', 'Phnom Penh'),
+(1, 'amy', '$2y$10$FIjYG4Fr9oRQGUx.nhEUUuF0GLAAmhM0t7F5WgLLvJBduVWZ8q.rm', 'admin', 'sreyaem.hourn@gmail.com', 'Phnom Penh'),
+(8, 'molika', '$2y$10$jguqkPB8G7oj1S3xMLoHZ.WFVWQBynVm5z9ZKWalcOr312bBBdG2u', 'user', 'molika@gmail.com', 'Phnom Penh'),
 (9, 'emily', '$2y$10$YkxqyHq5PiulqhGeJP0Z8O1yKJ6iRnIoIz58FRqSvBP50mu52K6RC', 'user', 'emily@gmail.com', 'France'),
 (10, 'kaka', '$2y$10$9zBWofguNUvlYCdxgmn.h.lbXyqv2UQXK5QtPwlccesqW9AVo/dia', 'user', 'kaka@gmail.com', 'English'),
 (11, 'Sreyaemh', '$2y$10$upA7zjOxKhd67zWXqGLwmuIP.TsBuPGtWTFCwaLk7fBtGoP2co2ay', 'user', 'sreyaem.hourn@gmail.com', 'Phnom Penh'),
-(12, 'rady', '$2y$10$19Wx5yjnTNVAve7J8Mwm0u6oKJLhL4dbEIbP7zsHu.HAFvEdPgtGm', 'user', 'sreyaem05@gmail.com', 'Phnom Penh');
+(12, 'rady', '$2y$10$19Wx5yjnTNVAve7J8Mwm0u6oKJLhL4dbEIbP7zsHu.HAFvEdPgtGm', 'user', 'sreyaem05@gmail.com', 'Phnom Penh'),
+(13, 'dara', '$2y$10$yAWaHOnw2JowzRcvXGFWZuf2qiaA6uIHVJSgvXGcYpU6IVLbXEG.a', 'user', 'dara@gmail.com', 'Phnom Penh'),
+(14, 'nara', '$2y$10$AkKaREh5qB4HOjoexLt5XO4LheSPqJ1UvX4wSOP7LdA5nilYlqgt2', 'user', 'nara@gmail.com', 'Phnom Penh'),
+(15, 'jhour', '$2y$10$GzhrVBwKrKO/3GLDMBTffezvYWZ.na9kwLHP5OOou6RxM3QJfSM9m', 'user', 'jhou@student.com', 'Phnom Penh');
 
 --
 -- Indexes for dumped tables
@@ -135,7 +139,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -147,7 +151,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
